@@ -14,4 +14,15 @@ public class ExampleUnitTest {
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
     }
+
+    @Test
+    public void test(){
+        assertNotNull(MainActivity.user_id.getText());
+        assertNotNull(MainActivity.user_password.getText());
+    }
+
+    @Test
+    public void addition_isNotCorrect() {
+        assertEquals(3, 2 + 2);
+    }
 }
