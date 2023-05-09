@@ -15,8 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    EditText user_id;
-    EditText user_password;
+    static EditText user_id;
+    static EditText user_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
