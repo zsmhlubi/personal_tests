@@ -1,34 +1,30 @@
 version: 2
-orbs:
-  android: circleci/android@1.0
 jobs:
   build:
     working_directory: ~/code
     docker:
-      #cicleci image for JAVA version 1.8
- #     - image: circleci/android:api-25-alpha
-      - image: ccistaging/android:api-30
+      - image: circleci/android:api-30
     environment:
       JVM_OPTS: -Xmx3200m
     steps:
       - checkout
+      - restore_cache:
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum "app/build.gradle" }}
       - run:
-          name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
-          command: sudo chmod +x ./gradlew
+          name: chmod permissions
+          command: chmod +x ./gradlew
       - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
       - save_cache:
           paths:
             - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-
-      # Generate apk
-      - run: ./gradlew assembleDebug
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum "app/build.gradle" }}
+      - run:
+          name: Run Tests
+          command: ./gradlew lint test
       - store_artifacts:
-          path: app/build/outputs/apk/
-          destination: apks/
-
-      # run tests!
-      - run: ./gradlew test # Use the latest 2.1 version of CircleCI pipeline process engine.
-
+          path: app/build/reports
+          destination: reports
+      - store_test_results:
+          path: app/build/test-results
