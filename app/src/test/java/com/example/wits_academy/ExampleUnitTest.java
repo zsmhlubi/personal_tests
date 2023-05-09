@@ -21,8 +21,4 @@ public class ExampleUnitTest {
         assertNotNull(MainActivity.user_password.getText());
     }
 
-    @Test
-    public void addition_isNotCorrect() {
-        assertEquals(3, 2 + 2);
-    }
 }
