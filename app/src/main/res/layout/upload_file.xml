@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/page_background"
+    android:layout_height="match_parent"
+    tools:context=".upload_file">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="158dp"
+        android:layout_height="140dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:onClick="upload"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="130dp"
+        app:srcCompat="@drawable/course_pic_2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_alignEnd="@+id/imageView3"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="20dp"
+        android:text="No file selected"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/pdfTitle"
+        android:layout_width="212dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/input_shape"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="File Name"/>
+
+    <TextView
+        android:id="@+id/uploadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/pdfTitle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="upload_file"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:text="View PDF"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

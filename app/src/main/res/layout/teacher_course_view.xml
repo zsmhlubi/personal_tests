@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/page_background"
+    android:layout_height="match_parent"
+    android:id="@+id/liner"
+    android:fitsSystemWindows="true"
+    tools:context=".teacher_course_view"
+    tools:openDrawer="start">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/page_background"
+        android:layout_height="match_parent"
+        android:id="@+id/draw_layout"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/contents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/design_default_color_primary"
+                    android:id="@+id/tooolbar"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:popupTheme="@style/Theme.AppCompat.Light"
+                    android:elevation="4dp"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/frame_layout"/>
+
+                <TextView
+                    android:id="@+id/teacher_slides_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingVertical="10dp"
+                    android:drawableRight="@drawable/add_icon"
+                    android:paddingRight="40dp"
+                    android:paddingLeft="20dp"
+                    android:text="Slides"
+                    android:textSize="19dp"
+                    android:onClick="upload"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_background_2"/>
+
+
+                <LinearLayout
+                    android:id="@+id/slide_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/teacher_videos_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingVertical="10dp"
+                    android:drawableRight="@drawable/add_icon"
+                    android:paddingRight="40dp"
+                    android:paddingLeft="20dp"
+                    android:text="Videos"
+                    android:textSize="19dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_background_2"/>
+                <LinearLayout
+                    android:id="@+id/video_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_gravity="start"
+            android:id="@+id/nav_t"
+            app:headerLayout="@layout/navigator"
+            app:menu="@menu/teacher_navigator"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/lay"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+
+        <LinearLayout
+            android:id="@+id/text"
+            android:layout_width="317dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_blue">
+
+                <TextView
+                    android:id="@+id/courseName"
+                    android:layout_width="132dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="175dp"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/courseCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/courseName"
+                    android:layout_alignStart="@+id/courseName"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="8dp"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/teacherName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/courseCode"
+                    android:layout_alignStart="@+id/courseCode"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="8dp"
+                    android:text="TextView" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/picture"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/course_pic_2" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/lay2"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+    <LinearLayout
+        android:id="@+id/text2"
+        android:layout_width="317dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/dark_green"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/courseName2"
+                android:layout_width="132dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="175dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/courseCode2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/courseName2"
+                android:layout_alignStart="@+id/courseName2"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/teacherName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/courseCode2"
+                android:layout_alignStart="@+id/courseCode2"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="8dp"
+                android:text="TextView" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/picture2"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/course_pic_2" />
+    </LinearLayout>
+</RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/page_background"
+    android:layout_height="match_parent"
+    android:id="@+id/liner"
+    android:fitsSystemWindows="true"
+    tools:context=".main_menu_student"
+    tools:openDrawer="start">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/page_background"
+        android:layout_height="match_parent"
+        android:id="@+id/draw_layout"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+        <ScrollView
+            android:id="@+id/t_sroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="80dp">
+
+            <LinearLayout
+                android:id="@+id/list_courses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/design_default_color_primary"
+                    android:id="@+id/tooolbar"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:popupTheme="@style/Theme.AppCompat.Light"
+                    android:elevation="4dp"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/frame_layout"/>
+
+                <TextView
+                    android:id="@+id/NoCoursesAvailable"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:layout_marginTop="300dp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="You are not currently enrolled in any course click on this text to see the available courses"
+                    android:onClick="go_to_courses"/>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_gravity="start"
+            android:id="@+id/nav"
+            app:headerLayout="@layout/navigator"
+            app:menu="@menu/student_toolbox"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+</LinearLayout>

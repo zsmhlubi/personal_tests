@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Wits_Academy</string>
+
+    <string-array name="role">
+        <item><font fgcolor='#FFFFFFFF'>Student</font></item>
+        <item><font fgcolor='#FFFFFFFF'>Teacher</font></item>
+    </string-array>
+
+    <string-array name="year">
+        <item><font fgcolor='#FFFFFFFF'>1 - First Year</font></item>
+        <item><font fgcolor='#FFFFFFFF'>2 - Second Year</font></item>
+        <item><font fgcolor='#FFFFFFFF'>3 - Third Year</font></item>
+        <item><font fgcolor='#FFFFFFFF'>4 - Forth Year</font></item>
+        <item><font fgcolor='#FFFFFFFF'>5 - Fifth Year</font></item>
+        <item><font fgcolor='#FFFFFFFF'>6 - Sixth Year</font></item>
+        <item><font fgcolor='#FFFFFFFF'>7 - Seventh Year</font></item>
+    </string-array>
+
+    <string name="navigator_open">Open navigation drawer</string>
+    <string name="navigator_close">Close navigation drawer</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+</resources>

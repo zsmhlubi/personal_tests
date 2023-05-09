@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/questions"
+            android:title="Question Forum"/>
+        <item android:id="@+id/announcements"
+            android:title="Send an announcements"/>
+        <item android:id="@+id/back"
+            android:title="Back to menu"/>
+        <item android:id="@+id/logout"
+            android:title="Logout"/>
+    </group>
+
+    <item android:title="Content">
+        <menu>
+            <item android:id="@+id/course_slides"
+                android:title="Upload slides"/>
+            <item android:id="@+id/videos"
+                android:title="Upload Lectures"/>
+            <item android:id="@+id/quiz"
+                android:title="Make Quiz"/>
+            <item android:id="@+id/assignment"
+                android:title="Upload assignment"/>
+            <item android:id="@+id/grades_quiz_and_assigments"
+                android:title="Mark quizzes and assignments"/>
+        </menu>
+    </item>
+
+</menu>
