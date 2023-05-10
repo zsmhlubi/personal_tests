@@ -24,9 +24,8 @@ jobs:
       - run:
           name: Run Tests
           command: ./gradlew testDebug
-      - android/start-emulator-and-run-tests:
-          test-command: ./gradlew connectDebugAndroidTest
-          system-image: system-image;android-25;google_apis;x86
+      - run:
+          command: ./gradlew connectDebugAndroidTest
       - run: ./gradlew assembleDebug
       - store_artifacts:
           path: app/build/outputs/apk/
