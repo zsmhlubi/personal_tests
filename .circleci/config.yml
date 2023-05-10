@@ -25,7 +25,7 @@ jobs:
           name: Run Tests
           command: ./gradlew testDebug
       - run:
-          test-command: ./gradlew connectedDebugAndroidTest
+          command: ./gradlew connectedDebugAndroidTest
           system-image: system-images;android-29;default;x86
 
       - run: ./gradlew assembleDebug
