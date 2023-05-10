@@ -24,7 +24,7 @@ jobs:
       - run:
           name: Run Tests
           command: ./gradlew testDebug
-      - android/run:
+      - run_ui_tests:
           test-command: ./gradlew connectedDebugAndroidTest
           system-image: system-images;android-29;default;x86
 
