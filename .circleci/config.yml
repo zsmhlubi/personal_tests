@@ -28,6 +28,7 @@ jobs:
 #       - run: ./gradlew assembleDebug
       - run: ./gradlew assembleRelease
       - store_artifacts:
+          name: Wits_Academy
           path: app/build/outputs/apk/
           destination: apks/
       - store_test_results:
