@@ -23,7 +23,7 @@ jobs:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum "app/build.gradle" }}
 
   unit tests:
-    working_directory: ~/project
+    working_directory: ~/code
     docker:
       - image: cimg/android:2023.02
     steps:
@@ -31,7 +31,7 @@ jobs:
       - run:
           name: Run Local UnitTests
           command: |
-            ./gradlew clean test
+            ./gradlew testDebug
 
       - store_test_results:
           path: app\build\test-results
@@ -65,7 +65,7 @@ jobs:
           # run in parallel with the emulator starting up, to optimize build time
           name: Run compileDemoBasicDebugJavaWithJavac task
           command: |
-            ./gradlew compileDemoBasicDebugJavaWithJavac
+            ./gradlew connectedDebugAndroidTest
       - run:
           name: Wait for emulator to start
           command: |
