@@ -44,7 +44,7 @@ jobs:
     steps:
       - codecov/upload:
           file: app/build 
-          token: 0fedcb62-99fa-48d6-ae2b-78b195bbb068 
+          token: env_var_name
           upload_name: CODECOV 
           url: https://app.codecov.io/gh/zsmhlubi 
           validate_url: true 
