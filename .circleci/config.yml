@@ -21,6 +21,11 @@ jobs:
           paths:
             - ~/.gradle
           key: jars-{{ checksum "build.gradle" }}-{{ checksum "app/build.gradle" }}
+      - run: ./gradlew assembleRelease
+      - store_artifacts:
+          name: Wits_Academy
+          path: app/build/outputs/apk/
+          destination: apks/
 
   unit tests:
     working_directory: ~/code
