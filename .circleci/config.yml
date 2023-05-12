@@ -116,7 +116,7 @@ jobs:
       - run:
           command: ./gradlew connectedCheck
       - store_artifacts:
-          path: app/build/reports/jacoco/jacocoTestReport/html
+          path: app/build/reports/androidTest-results
           destination: coverage 
 
 workflows:
