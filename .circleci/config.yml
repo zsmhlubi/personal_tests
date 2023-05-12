@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  codecov: codecov/codecov@3.0.0
 jobs:
   build:
     working_directory: ~/code
@@ -118,6 +120,10 @@ jobs:
       - store_artifacts:
           path: app/build/reports/androidTest-results
           destination: coverage 
+      - run: |
+          curl -Os https://uploader.codecov.io/latest/macos/codecov
+          chmod +x codecov
+          ./codecov
 
 workflows:
   build_and_deploy:
