@@ -28,7 +28,7 @@ jobs:
 #       - run: ./gradlew assembleDebug
       - run: ./gradlew assembleRelease
       - store_artifacts:
-          path: app/build/outputs/apk/apk-debug.apk
+          path: app/build/outputs/apk/
           destination: apks/
       - store_test_results:
           path: app/build/test-results
