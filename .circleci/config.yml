@@ -24,13 +24,13 @@ jobs:
       - run:
           name: Run Tests
           command: ./gradlew testDebug
-      - run:
           command: ./gradlew connectedDebugAndroidTest
           system-image: system-images;android-29;default;x86
 
-      - run: ./gradlew assembleDebug
+#       - run: ./gradlew assembleDebug
+      - run: ./gradlew assembleRelease
       - store_artifacts:
-          path: app/build/outputs/apk/
+          path: app/build/outputs/apk/apk-debug.apk
           destination: apks/
       - store_test_results:
           path: app/build/test-results
