@@ -35,4 +35,8 @@ jobs:
           destination: apks/
       - store_test_results:
           path: app/build/test-results
-      - codecov/upload
+      - name: Codecov
+      - run: |
+          curl -Os https://uploader.codecov.io/latest/linux/codecov 
+          chmod +x codecov
+          ./codecov
