@@ -37,7 +37,7 @@ jobs:
             ./gradlew testDebug
 
       - store_test_results:
-          path: app\build\test-results
+          path: app/build/test-results
 
 
   instrumented_test:
@@ -107,7 +107,7 @@ jobs:
             - ~/.gradle/caches
             - ~/.gradle/wrapper
       - store_test_results:
-          path: app\build\outputs\androidTest-results
+          path: app/build/outputs/androidTest-results
 
 workflows:
   build_and_deploy:
