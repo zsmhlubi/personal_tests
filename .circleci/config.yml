@@ -118,11 +118,11 @@ jobs:
       - run:
           command: ./gradlew connectedCheck
       - store_artifacts:
-          path: app/build/reports/androidTest-results
+          path: app/build/reports/jococo
           destination: coverage 
       - run: |
-          curl -Os https://uploader.codecov.io/latest/linux/codecov
-          chmod +x codecov
+          curl -Os https://uploader.codecov.io/latest/linux/codecov 
+          chmod +x codecov 
           ./codecov
 
 workflows:
