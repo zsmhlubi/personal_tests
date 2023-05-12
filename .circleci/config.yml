@@ -35,7 +35,7 @@ jobs:
           destination: apks/
       - store_test_results:
           path: app/build/test-results
-      - run: ./gradlew testDebugUnitTest jacocoTestReport
+      - run: ./gradlew testDebugUnitTest connectedCheck
       - run:
           name: Upload code coverage report to Codecov
           command: bash <(curl -s https://codecov.io/bash) -f app/build/reports/jacoco/jacocoTestReport/jacocoTestReport.xml
