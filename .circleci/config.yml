@@ -43,6 +43,8 @@ jobs:
 
       - store_test_results:
           path: app/build/test-results
+      - run:
+          command: ./gradlew connectedCheck
 
 
   instrumented_test:
@@ -113,6 +115,8 @@ jobs:
             - ~/.gradle/wrapper
       - store_test_results:
           path: app/build/outputs/androidTest-results
+      - run:
+          command: ./gradlew connectedCheck
 
 workflows:
   build_and_deploy:
@@ -124,3 +128,4 @@ workflows:
       - unit tests:
           requires:
             - build
+      
