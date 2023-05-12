@@ -35,7 +35,7 @@ jobs:
           destination: apks/
       - store_test_results:
           path: app/build/test-results
-      - run: ./gradlew jacocoTestReport
+      - run: ./gradlew connectedCheck
 
    
 #   example-job:
