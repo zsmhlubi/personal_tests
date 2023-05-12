@@ -29,6 +29,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: chmod permissions
+          command: chmod +x ./gradlew
+      - run:
           name: Run Local UnitTests
           command: |
             ./gradlew testDebug
@@ -43,6 +46,9 @@ jobs:
     resource_class: large
     steps:
       - checkout
+      - run:
+          name: chmod permissions
+          command: chmod +x ./gradlew
       - run:
           name: Create avd
           command: |
