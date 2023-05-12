@@ -35,7 +35,25 @@ jobs:
           destination: apks/
       - store_test_results:
           path: app/build/test-results
+   
+  example-job:
+    working_directory: ~/code
+    docker:
+      # replace with your preferred image
+      - image: cimg/base:stable
+    steps:
+      - codecov/upload:
+          file: app/build 
+          token: 0fedcb62-99fa-48d6-ae2b-78b195bbb068 
+          upload_name: CODECOV 
+          url: https://app.codecov.io/gh/zsmhlubi 
+          validate_url: true 
       - run: |
           curl -Os https://uploader.codecov.io/latest/linux/codecov 
           chmod +x codecov
-          ./codecov -t ${CODECOV_TOKEN=0fedcb62-99fa-48d6-ae2b-78b195bbb068}
+          ./codecov
+workflows:
+  build_and_deploy:
+    jobs:
+      - build
+      - example-job
