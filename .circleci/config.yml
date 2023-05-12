@@ -1,4 +1,6 @@
 version: 2
+orbs:
+  codecov: codecov/codecov@3.2.4
 jobs:
   build:
     working_directory: ~/code
@@ -33,3 +35,4 @@ jobs:
           destination: apks/
       - store_test_results:
           path: app/build/test-results
+      - codecov/upload
