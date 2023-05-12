@@ -35,7 +35,8 @@ jobs:
           destination: apks/
       - store_test_results:
           path: app/build/test-results
-      - run: ./gradlew createDebugCoverageReport
+      - run: ./gradlew jacocoTestReport
+
    
 #   example-job:
 #     working_directory: ~/code
