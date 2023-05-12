@@ -43,8 +43,6 @@ jobs:
 
       - store_test_results:
           path: app/build/test-results
-      - run:
-          command: ./gradlew connectedCheck
 
 
   instrumented_test:
@@ -117,6 +115,9 @@ jobs:
           path: app/build/outputs/androidTest-results
       - run:
           command: ./gradlew connectedCheck
+      - store_artifacts:
+          path: app/build/reports/jacoco/jacocoTestReport/html
+          destination: coverage 
 
 workflows:
   build_and_deploy:
