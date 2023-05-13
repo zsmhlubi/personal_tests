@@ -23,21 +23,21 @@ jobs:
           paths:
             - ~/.gradle
           key: jars-{{ checksum "build.gradle" }}-{{ checksum "app/build.gradle" }}
-      - run:
-          name: Install Android SDK components
-          command: |
-            sdkmanager --install 'platforms;android-30' 'build-tools;30.0.3' 'system-images;android-30;google_apis;x86_64'
+      # - run:
+      #     name: Install Android SDK components
+      #     command: |
+      #       sdkmanager --install 'platforms;android-30' 'build-tools;30.0.3' 'system-images;android-30;google_apis;x86_64'
 
       # Create an AVD
       - run:
-          name: Create AVD
+          name: Start AVD
           command: |
-            echo no | avdmanager create avd --force --name test --package 'system-images;android-30;google_apis;x86_64' --tag google_apis --abi x86_64
+            $ANDROID_HOME/emulator/emulator -avd test -no-window -no-audio -no-boot-anim &
 
-      # Start the emulator
+      # Wait for the AVD to start
       - run:
-          name: Start emulator
-          command: android-emu/start-emulator
+          name: Wait for AVD to start
+          command: android-wait-for-emulator
       - run:
           name: Run Tests
           command: ./gradlew testDebug
