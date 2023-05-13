@@ -123,7 +123,7 @@ jobs:
       - run: |
           curl -Os https://uploader.codecov.io/latest/linux/codecov 
           chmod +x codecov 
-          ./codecov -t ${CODECOV_TOKEN} -f app/bulid/reports/
+          ./codecov -t ${CODECOV_TOKEN} -f app/build/outputs/code-coverage/connected/*coverage.ec
 
 workflows:
   build_and_deploy:
