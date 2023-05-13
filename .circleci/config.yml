@@ -24,6 +24,21 @@ jobs:
             - ~/.gradle
           key: jars-{{ checksum "build.gradle" }}-{{ checksum "app/build.gradle" }}
       - run:
+          name: Install Android SDK components
+          command: |
+            sdkmanager --install 'platforms;android-30' 'build-tools;30.0.3' 'system-images;android-30;google_apis;x86_64'
+
+      # Create an AVD
+      - run:
+          name: Create AVD
+          command: |
+            echo no | avdmanager create avd --force --name test --package 'system-images;android-30;google_apis;x86_64' --tag google_apis --abi x86_64
+
+      # Start the emulator
+      - run:
+          name: Start emulator
+          command: android-emu/start-emulator
+      - run:
           name: Run Tests
           command: ./gradlew testDebug
 
